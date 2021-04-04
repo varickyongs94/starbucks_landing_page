@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Starbucks Website Landing Page </title>
+</head>
+<body>
+                    <!----------------------------------header----------------------------------->
+
+                    <section>
+                        <div class="circle"></div>
+                                <header>
+                                            <a href="" class="logo"><img src="logo.png" alt=""></a>
+
+                                            <ul>
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="#">Menu</a></li>
+                                                <li><a href="#">What ' s New</a></li>
+                                                <li><a href="#">Contact</a></li>
+                                            </ul>
+                                </header>
+<!--content-->
+                                <div class="content">
+<!--left side-->          
+                                                    <div class="textBx">
+                                                        <h1 class="heading">It´s not just Coffee <br>
+                                                        It´s <span class="starcolor">Starbucks</span></h1>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                            Eum dignissimos quibusdam impedit nobis quia laudantium 
+                                                            voluptates delectus, dolores soluta repellendus rem, expedita
+                                                            inventore? Autem odio porro suscipit ipsum maxime? Ullam.
+                                                            </p>
+                                                            <a href="#">Learn More</a>
+                                                    </div>
+<!--right side-->
+                                                <div class="imgBx">
+                                                    <img src="img1.png" alt="green" class="starbucks">
+                                                </div>
+                                    </div>
+
+                                   <ul class="thumb">
+                                       <li><img src="thumb1.png"   onclick="imageSlider('img1.png'); colorchangeCircleColor('#017143');  changTextColor('#017143')" ></li>
+                                       <li><img src="thumb2.png"   onclick="imageSlider('img2.png'); colorchangeCircleColor('#eb7495'); changTextColor('#eb7495')"></li>
+                                       <li><img src="thumb3.png" onclick="imageSlider('img3.png') ; colorchangeCircleColor('#d752b1');changTextColor('#d752b1')" ></li>
+                                   </ul>
+
+                                   <ul class="sci">
+                                       <li><a href="#"><img src="facebook.png" a></a></li>
+                                       <li><a href="#"><img src="instagram.png" a></a></li>
+                                       <li><a href="#"><img src="twitter.png" a></a></li>
+                                   </ul>
+                    </section>
+
+
+                    <!----JAVASCRIPT-->
+                    <script>
+
+                        // we create a function change the image by clicking on the thumb image
+                        function imageSlider(anything){
+                            document.querySelector(".starbucks").src = anything;
+                        }
+
+                            function colorchangeCircleColor(color){
+                                const circle = document.querySelector(".circle");
+                                circle.style.background = color;
+                            }
+
+
+                            function changTextColor(textcolor){
+                                const textColor = document.querySelector(".starcolor");
+                                textColor.style.color = textcolor;
+                            }
+                    </script>
+                    
+</body>
+</html>
